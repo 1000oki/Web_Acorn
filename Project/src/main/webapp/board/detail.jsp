@@ -38,7 +38,7 @@
 	  width: 100%;
 	  height: 160px;
 	}
-	.card-body > form{
+	#comment-body > form{
 		display: none;
 	}
 </style>
@@ -94,7 +94,7 @@
 					 </svg> 
 					 REPLY
 				  </div>
-				  <div class="card-body">
+				  <div class="card-body">				  
 				   	<form action="${pageContext.request.contextPath }/comment/insert.jsp" method="post">
 						<input type="hidden" name="num" value="<%=num%>"/>
 						<div>
@@ -128,7 +128,7 @@
 								<%=tmp.getRegdate() %>
 							</p>
 						  </div>
-						  <div class="card-body">
+						  <div class="card-body" id="comment-body">
 						   	<form ref="form<%=tmp.getCommentNum() %>" action="${pageContext.request.contextPath }/comment/update.jsp" method="post">
 								<div>
 									<input type="hidden" name="num" value="<%=tmp.getCommentNum() %>" />
@@ -137,7 +137,7 @@
 								</div>
 								<button type="submit" class="btn btn-sm btn-dark">수정</button>
 							</form>
-							<div v-if=commentShow><%=tmp.getComment1() %></div>
+							<div v-if=comment><%=tmp.getComment1() %></div>
 							<%if(tmp.getWriter().equals(id)){ %>
 								<div ref="div<%=tmp.getCommentNum() %>">
 									<button class="btn btn-sm btn-dark" v-on:click="update(<%=tmp.getCommentNum() %>)">수정</button>
@@ -157,6 +157,9 @@
 	<script>
 		let app = new Vue({
 			el:"#app",	
+			data:{
+				comment:true
+			},
 			methods:{
 				commentdel(num){
 					const isDelete = confirm("이 댓글을 삭제하겠습니까?");
@@ -171,6 +174,7 @@
 					}
 				},
 				update(num){
+					this.comment = false;
 					this.$refs["form"+num].style.display="block";
 					this.$refs["div"+num].style.display="none";
 				}
