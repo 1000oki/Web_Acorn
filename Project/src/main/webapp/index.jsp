@@ -46,7 +46,7 @@
 	</jsp:include>
 	<div class="container">
 		<div >
-			<h3 mt-5><strong>베스트 셀러 Top3</strong></h3>
+			<h3 mt-5><strong>Best Seller Top3</strong></h3>
 			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 			  <div class="carousel-inner">
 		    	<div class="carousel-item text-center active">

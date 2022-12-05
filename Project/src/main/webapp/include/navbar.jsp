@@ -50,7 +50,7 @@
            </li>
         <%}else{%>
         	 <span class="navbar-text">
-		        <%=id %>님 로그인 중...
+		        <%=id %>님 로그인 중....
 		      </span>
            	<li class="nav-item">
            		<a class="nav-link" href="${pageContext.request.contextPath }/users/logout.jsp">로그아웃</a>
