@@ -86,6 +86,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </head>
 <body>
+	<%-- 페이지를 include 시킬때는 WEB-INF 폴더에 있는 페이지도 include 가능하다 --%>
+	<jsp:include page="/WEB-INF/include/navbar.jsp">
+		<jsp:param value="cafe" name="thisPage"/>
+	</jsp:include>
+	<%-- navbar 포함 --%>
 	<%-- navbar 포함 --%>
 	<jsp:include page="/include/navbar.jsp">
 		<jsp:param value="cafeList" name="thisPage"/>

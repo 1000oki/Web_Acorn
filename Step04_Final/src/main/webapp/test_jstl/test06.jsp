@@ -16,7 +16,6 @@
 	<h1>forTokens 활용</h1>
 	<h2>취미 목록</h2>
 	<ul>
-	
 		<c:forTokens var="tmp" items="${hobby }" delims="/">
 			<li>${tmp }</li>
 		</c:forTokens>

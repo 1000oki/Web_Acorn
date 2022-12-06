@@ -52,16 +52,6 @@
 		입니다.
 	</p>
 	
-	<%
-		String id=(String)session.getAttribute("id");
-	%>
-	
-	<%if(id == null){ %>
-		<p> 로그인이 필요 합니다.</p>
-	<%}else{ %>
-		<p> <strong><%=id %></strong> 님 로그인중...</p>
-	<%} %>
-	
 	<c:choose>
 		<c:when test="${ empty id }">
 			<p>로그인이 필요 합니다.</p>
