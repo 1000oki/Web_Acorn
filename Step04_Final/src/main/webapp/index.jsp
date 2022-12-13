@@ -52,10 +52,13 @@
 			<p>
 				<a href="${pageContext.request.contextPath }/users/private/info.jsp"><%=id %></a>님 로그인중..
 				<a href="${pageContext.request.contextPath }/users/logout.jsp">로그아웃</a>
+				<a href="my_app/index.html">React테스트</a>
 			</p>
 			</c:when>
 			<c:otherwise>
 				<a href="${pageContext.request.contextPath }/users/loginform.jsp">로그인</a>
+				<a href="my_app/index.html">React테스트</a>
+				<a href="users/signup_form4.jsp">React테스트</a>
 			</c:otherwise>
 		</c:choose>
 		<div class="row justify-content-md-center">
